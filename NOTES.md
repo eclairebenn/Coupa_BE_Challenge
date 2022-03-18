@@ -105,18 +105,16 @@ DELETE /businesses/:business_id/custom_attributes
 
 ### Employees to specify their values:
 
-```json
 POST /employees/:employee_id
 
+```json
 {
-    "sales_ranking" : 2,
-    "email" : "employee@business.com",
-
+  "sales_ranking": 2,
+  "email": "employee@business.com"
 }
 ```
 
 ```SQL
-SQL Query
 
  UPDATE employees
  SET custom_attributes = jsonb_set(custom_attributes, '{sales_ranking}', '3', true)

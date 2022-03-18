@@ -190,6 +190,13 @@ GET
 
 ### Security
 
+- Secure API with OAuth
+- API key to request a token
+- Token redirects user to authentication partner
+- Third party confirms authorization
+- Request access aoken
+- Return access token with timeout
+
 ### PostgreSQL
 
 - Consider breaking out common custom attributes.

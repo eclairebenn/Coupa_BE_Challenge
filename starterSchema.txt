@@ -1,0 +1,21 @@
+Table businesses as B {
+  id int [pk, increment] // auto-increment
+  team_name varchar
+}
+
+Table trips {
+  id int [pk, increment]
+  business_id int
+  employee_id int
+  trip_name varchar
+}
+ 
+Table employees {
+  id int [pk, increment]
+  business_id int
+  employee_name varchar
+}
+
+Ref: B.id < employees.business_id
+Ref: B.id < trips.business_id
+Ref: trips.employee_id > employees.id
